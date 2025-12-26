@@ -1,100 +1,129 @@
 /* global */
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono&display=swap');
 
-body{
+:root {
+    --bg-color: #020617;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --accent-blue: #38bdf8;
+    --accent-indigo: #818cf8;
+    --glass-bg: rgba(30, 41, 59, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.05);
+}
+
+body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-image: url("background.jpg");
-    color: #7A7C80;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-h2,.white{
-    color: #fff;
+h1, h2, h3 {
+    margin: 0;
+    letter-spacing: -0.05em;
 }
 
-a{
-    color: #7A7C80;
+.gradient-text {
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-indigo));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+}
+
+.card-container {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border-radius: 2.5rem;
+    padding: 2.5rem;
+}
+
+.card-container:hover {
+    transform: scale(1.01);
+    border-color: rgba(56, 189, 248, 0.2);
+}
+
+.bg-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: auto;
+    max-width: 90%;
+    opacity: 0.25;
+    filter: blur(25px) saturate(1.5);
+    z-index: -1;
+    pointer-events: none;
+    object-fit: contain;
+}
+
+.content-layer {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    text-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+}
+
+.btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, #0ea5e9, #6366f1);
+    color: white;
+    padding: 0.75rem 2.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
     text-decoration: none;
-}
-/* section 1 */
-.section-1{
-    padding-top: 10vh;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
     text-align: center;
 }
 
-.section-1 p{
-    font-size: 1.1rem;
-    padding-bottom: 10px;
-    margin:0;
+.btn-primary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -10px rgba(99, 102, 241, 0.5);
 }
 
-.section-1 h2{
-    font-size: 1.7rem;
-    margin-bottom: 10px;
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--glass-border);
 }
 
-.section-1 a{
-    font-size: 1.5rem;
-    padding: 10px;
-}
-/* section 2 */
-.section-2{
-    padding-top: 5vh;
-    text-align: center
+a {
+    transition: color 0.2s ease;
+    text-decoration: none;
 }
 
-.section-2 h2{
-    font-size: 1.7rem;
-    margin-bottom: 10px;
-}
-
-.section-2 p{
-    font-size: 1.1rem;
-    padding-bottom: 10px;
-    margin:0;
-}
-
-.section-2 a{
-    display: block;
-    padding: 5px;
-    font-size: 1.5rem;
-    padding-left: 0;
-}
-/* animations / utilities */
-.section-2 a:hover{
-    font-size: 1.3rem;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.section-1 a:hover{
-    color: #fff;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.white:hover{
-    position: relative;
-    padding-left: 10px;
-}
-
-/* media queres */
-@media(max-width:780px){
-    .grid-2{
-        grid-template-columns: 1fr;
+@media (max-width: 780px) {
+    .card-container {
+        padding: 1.5rem;
+        border-radius: 1.5rem;
     }
-    .section-1{
-        padding:0;
-        padding-top: 5rem;
-    }
-    .section-2{
-        padding: 0;
-        padding-left: 1.5rem;
-        padding-top: 2rem;
+    
+    h1 {
+        font-size: 3rem;
     }
 }
