@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mukesh Singh | Android Developer</title>
+    <meta name="description" content="Portfolio of Mukesh Singh, an Android Developer and ROM Maintainer specializing in modern app development and custom Android optimizations.">
+    <meta property="og:title" content="Mukesh Singh | Android Developer">
+    <meta property="og:description" content="Android Developer & ROM Maintainer showcasing modern app projects and custom ROM contributions.">
+    <meta property="og:type" content="website">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
         /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
@@ -100,6 +105,10 @@
             border-radius: 2rem;
             box-shadow: 0 0 30px rgba(167, 139, 250, 0.3);
         }
+
+        .fluid-h1 {
+            font-size: clamp(3rem, 10vw, 8rem);
+        }
     </style>
 </head>
 <body class="selection:bg-fuchsia-500/30">
@@ -108,9 +117,9 @@
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <span class="font-extrabold text-2xl tracking-[0.1em] uppercase">Mukesh<span class="text-fuchsia-500">.</span></span>
             <div class="space-x-12 text-[10px] font-bold uppercase tracking-[0.4em] text-slate-400 hidden md:flex">
-                <a href="#projects" class="hover:text-white transition-all">Projects</a>
-                <a href="https://github.com/mukesh22584" class="hover:text-white transition-all">GitHub</a>
-                <a href="https://t.me/matrixx_community" class="hover:text-white transition-all">Telegram</a>
+                <a href="#projects" class="hover:text-white transition-all" aria-label="View Projects">Projects</a>
+                <a href="https://github.com/mukesh22584" class="hover:text-white transition-all" aria-label="GitHub Profile">GitHub</a>
+                <a href="https://t.me/mukesh22584" class="hover:text-white transition-all" aria-label="Contact me on Telegram">Telegram</a>
             </div>
         </div>
     </nav>
@@ -120,11 +129,11 @@
             <div class="flex flex-col md:flex-row items-center gap-10 mb-16">
                 <div class="relative group flex-shrink-0">
                     <div class="absolute -inset-2 bg-gradient-to-r from-fuchsia-500 to-cyan-400 rounded-[2rem] blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-                    <img src="assets/logo.png" alt="Logo" class="relative avatar-glow w-28 h-28 md:w-44 md:h-44 rounded-[1.8rem] border border-white/10 shadow-2xl" onerror="this.src='https://github.com/mukesh22584.png'">
+                    <img src="assets/logo.png" alt="Mukesh Singh Profile Logo" class="relative avatar-glow w-28 h-28 md:w-44 md:h-44 rounded-[1.8rem] border border-white/10 shadow-2xl" onerror="this.src='https://github.com/mukesh22584.png'">
                 </div>
                 
                 <div class="text-center md:text-left">
-                    <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter gradient-text leading-tight">Mukesh Singh</h1>
+                    <h1 class="font-extrabold tracking-tighter gradient-text leading-tight fluid-h1">Mukesh Singh</h1>
                     <p class="mono username-tag font-bold">@mukesh22584</p>
                 </div>
             </div>
@@ -147,7 +156,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 
                 <div class="card-container glass p-14 rounded-[3.5rem] md:col-span-2 min-h-[400px] justify-center border-white/5">
-                    <img src="assets/inventory_logo.png" class="bg-watermark" alt="" onerror="this.style.display='none'">
+                    <img src="assets/inventory_logo.png" class="bg-watermark" alt="Inventory Price Logo" onerror="this.style.display='none'">
                     <div class="content-layer">
                         <span class="bg-white/5 text-slate-400 text-[9px] font-black px-6 py-2.5 rounded-full border border-white/10 uppercase tracking-[0.5em]">Release</span>
                         <h3 class="text-4xl md:text-6xl font-extrabold mt-8 mb-8 uppercase app-title">Inventory Price App</h3>
@@ -157,24 +166,24 @@
                 </div>
 
                 <div class="card-container glass p-14 rounded-[3.5rem] min-h-[450px] justify-between border-white/5">
-                    <img src="assets/matrixx_logo.png" class="bg-watermark" alt="" onerror="this.style.display='none'">
+                    <img src="assets/matrixx_logo.png" class="bg-watermark" alt="Project Matrixx Logo" onerror="this.style.display='none'">
                     <div class="content-layer">
                         <h3 class="text-3xl font-extrabold mb-6 uppercase tracking-[0.1em] text-cyan-400">Project Matrixx</h3>
                         <p class="text-slate-400 font-light leading-loose mb-12 airy-p text-lg">A feature-rich Custom ROM based on crDroid with optimizations and unique UI elements.</p>
                     </div>
                     <div class="content-layer">
-                        <a href="https://github.com/ProjectMatrixx" class="mono text-[9px] font-black bg-white/5 border border-white/10 px-10 py-5 rounded-xl hover:bg-white/10 transition-all inline-block tracking-[0.4em] uppercase">Source Code →</a>
+                        <a href="https://github.com/ProjectMatrixx" class="mono text-[9px] font-black bg-white/5 border border-white/10 px-10 py-5 rounded-xl hover:bg-white/10 transition-all inline-block tracking-[0.4em] uppercase" aria-label="View Project Matrixx Source Code">Source Code →</a>
                     </div>
                 </div>
 
                 <div class="card-container glass p-14 rounded-[3.5rem] min-h-[450px] justify-between border-white/5">
-                    <img src="assets/xtended_logo.png" class="bg-watermark" alt="" onerror="this.style.display='none'">
+                    <img src="assets/xtended_logo.png" class="bg-watermark" alt="Project Xtended Logo" onerror="this.style.display='none'">
                     <div class="content-layer">
                         <h3 class="text-3xl font-extrabold mb-6 uppercase tracking-[0.1em] text-red-500">Project Xtended</h3>
                         <p class="text-slate-400 font-light leading-loose mb-12 airy-p text-lg">Lead developer for one of the most stable and customized ROMs in the Android community.</p>
                     </div>
                     <div class="content-layer">
-                        <a href="https://github.com/Project-Xtended" class="mono text-[10px] font-black bg-white/5 border border-white/10 px-10 py-5 rounded-xl hover:bg-white/10 transition-all inline-block tracking-[0.4em] uppercase">History →</a>
+                        <a href="https://github.com/Project-Xtended" class="mono text-[10px] font-black bg-white/5 border border-white/10 px-10 py-5 rounded-xl hover:bg-white/10 transition-all inline-block tracking-[0.4em] uppercase" aria-label="View Project Xtended Development History">History →</a>
                     </div>
                 </div>
 
@@ -183,11 +192,11 @@
 
         <footer class="py-32 text-center border-t border-white/5">
             <div class="flex justify-center gap-16 text-[9px] font-black text-slate-500 mb-14 uppercase tracking-[0.6em]">
-                <a href="https://github.com/mukesh22584" class="hover:text-white transition-colors">GITHUB</a>
-                <a href="https://t.me/mukesh22584" class="hover:text-white transition-colors">TELEGRAM</a>
-                <a href="#" class="hover:text-white transition-colors">XDA</a>
+                <a href="https://github.com/mukesh22584" class="hover:text-white transition-colors" aria-label="GitHub Profile">GITHUB</a>
+                <a href="https://t.me/mukesh22584" class="hover:text-white transition-colors" aria-label="Telegram Contact">TELEGRAM</a>
+                <a href="#" class="hover:text-white transition-colors" aria-label="XDA Profile">XDA</a>
             </div>
-            <p class="text-slate-600 text-[9px] font-bold uppercase tracking-[0.8em]">© 2025 Mukesh Singh • Handcrafted for Performance</p>
+            <p class="text-slate-600 text-[9px] font-bold uppercase tracking-[0.8em]">© 2026 Mukesh Singh • Handcrafted for Performance</p>
         </footer>
     </main>
 
