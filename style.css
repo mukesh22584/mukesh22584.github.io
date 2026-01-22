@@ -117,6 +117,30 @@ a {
     text-decoration: none;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.snap-x {
+    scroll-snap-type: x mandatory;
+}
+.snap-center {
+    scroll-snap-align: center;
+}
+
 @media (max-width: 780px) {
     .card-container {
         padding: 1.5rem;
