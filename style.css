@@ -152,6 +152,15 @@ nav.site-nav {
 }
 .nav-logo .prompt { color: var(--accent); }
 
+.nav-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--border-strong);
+  object-fit: cover;
+  background: var(--bg-terminal);
+}
+
 .nav-links a {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.72rem;
@@ -161,6 +170,13 @@ nav.site-nav {
   color: var(--text-dim);
 }
 .nav-links a:hover { color: var(--accent); }
+
+@media (max-width: 460px) {
+  .nav-avatar { width: 28px; height: 28px; }
+  .nav-logo { font-size: 0.85rem; }
+  .nav-links { gap: 0.85rem !important; }
+  .nav-links a { font-size: 0.6rem; letter-spacing: 0.06em; }
+}
 
 /* Terminal panel — signature hero element */
 
@@ -349,11 +365,15 @@ nav.site-nav {
   display: flex;
   gap: 1.1rem;
   overflow-x: auto;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1.1rem;
   scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-dim) var(--bg-raised);
 }
-.shot-scroller::-webkit-scrollbar { display: none; }
-.shot-scroller { scrollbar-width: none; }
+.shot-scroller::-webkit-scrollbar { height: 8px; }
+.shot-scroller::-webkit-scrollbar-track { background: var(--bg-raised); border-radius: 8px; }
+.shot-scroller::-webkit-scrollbar-thumb { background: var(--accent-dim); border-radius: 8px; }
+.shot-scroller::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
 .shot-frame {
   flex-shrink: 0;
